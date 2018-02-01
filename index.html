@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>My Contacts</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<header class="container">
+  <h1 class="page-header text-center ">My Contacts</h1>
+  <div class="row">
+  <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+  <input id='filterInput' class=" form-control" style="margin-bottom:10px" type="text" placeholder="Search Names...">
+</div>
+  <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+  </div>
+</div>
+</header>
+
+<div class="container">
+  <div class="row">
+  <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+  <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><h3>A</h3></div>
+
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item">Adam</li>
+    <li class="list-group-item">Alex</li>
+    <li class="list-group-item">Anzy</li>
+    <li class="list-group-item">Ali</li>
+    <li class="list-group-item">Ankur</li>
+  </ul>
+</div>
+</div>
+
+<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading"><h3>B</h3></div>
+
+
+<!-- List group -->
+<ul class="list-group">
+  <li class="list-group-item">Bob</li>
+  <li class="list-group-item">Bandyz</li>
+  <li class="list-group-item">Brad</li>
+  <li class="list-group-item">Bacoo</li>
+  <li class="list-group-item">Brey</li>
+</ul>
+</div>
+</div>
+
+<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading"><h3>C</h3></div>
+
+
+<!-- List group -->
+<ul class="list-group">
+  <li class="list-group-item">Cathy</li>
+  <li class="list-group-item">colin</li>
+  <li class="list-group-item">Cenzy</li>
+
+
+</ul>
+</div>
+</div>
+
+<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading"><h3>D</h3></div>
+
+
+<!-- List group -->
+<ul class="list-group">
+  <li class="list-group-item">Daniel</li>
+  <li class="list-group-item">Danny</li>
+  <li class="list-group-item">Donzy</li>
+  <li class="list-group-item">Drab</li>
+
+</ul>
+</div>
+</div>
+
+<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+
+</div>
+</div>
+
+
+</div>
+
+
+    <script>
+      var filterList=document.getElementById('filterInput');
+      filterList.addEventListener('keyup',filterNames);
+
+
+      function filterNames(){
+        var filterValue=document.getElementById('filterInput').value.toUpperCase();
+        console.log(filterValue);
+
+
+        var li=document.getElementsByClassName('list-group-item');
+        for (var i = 0; i < li.length; i++) {
+          item = li[i].textContent.toLowerCase();
+          searchString = filterValue.toLowerCase();
+          if(item.includes(searchString)){
+              li[i].style.display='';
+
+          }
+          else {
+            li[i].style.display='none';
+          }
+        }
+      }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
